@@ -69,7 +69,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section className="py-20 bg-section relative overflow-hidden">
+    <section className="py-16 bg-section relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary opacity-3 rounded-full blur-3xl"></div>
@@ -77,23 +77,23 @@ export default function AboutSection() {
       </div>
 
       <div className="xl:container xl:mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12" data-aos="fade-up">
+        <div className="text-center mb-10" data-aos="fade-up">
           <div className="inline-block px-4 py-2 bg-secondary rounded-full mb-6">
             <span className="text-sm font-semibold text-primary">About Us</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-text">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-text">
             About <span className="gradient-text">ODS Aligners</span>
           </h2>
-          <p className="text-lg max-w-2xl mx-auto text-text opacity-75 leading-relaxed">
+          <p className="text-base md:text-lg max-w-2xl mx-auto text-text opacity-75 leading-relaxed">
             Clinician-focused, quality-driven, globally trusted aligners
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
           {values.map((value, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl border border-secondary/30 card-shadow-hover hover-lift transition-all duration-300 text-center"
+              className="bg-white p-6 rounded-2xl border border-secondary/30 card-shadow-hover hover-lift transition-all duration-300 text-center"
               data-aos="fade-up"
               data-aos-delay={index * 150}
             >

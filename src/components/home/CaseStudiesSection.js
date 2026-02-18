@@ -62,12 +62,12 @@ export default function CaseStudiesSection() {
   ];
 
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-16 bg-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary opacity-2 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
       <div className="xl:container xl:mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
           {/* Left Content */}
           <div data-aos="fade-right">
             <div className="inline-block px-4 py-2 bg-secondary rounded-full mb-6">
@@ -75,16 +75,16 @@ export default function CaseStudiesSection() {
                 Clinical Outcomes
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-text leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 text-text leading-tight">
               Real Results from{" "}
               <span className="gradient-text">ODS Aligners</span>
             </h2>
-            <p className="text-lg text-text opacity-75 mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-text opacity-75 mb-6 leading-relaxed">
               See how our aligners deliver predictable, high-quality outcomes
               across thousands of successful treatments worldwide.
             </p>
 
-            <div className="space-y-5 mb-8">
+            <div className="space-y-4 mb-6">
               {highlights.map((highlight, index) => (
                 <div
                   key={index}
@@ -115,7 +115,7 @@ export default function CaseStudiesSection() {
           {/* Right - Stats Grid */}
           <div className="grid grid-cols-2 gap-6" data-aos="fade-left">
             <div
-              className="bg-gradient-to-br from-primary to-primary-dark p-8 rounded-2xl text-white shadow-xl"
+              className="bg-gradient-to-br from-primary to-primary-dark p-6 rounded-2xl text-white shadow-xl"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
@@ -123,7 +123,7 @@ export default function CaseStudiesSection() {
               <div className="text-sm opacity-90">Aligners Manufactured</div>
             </div>
             <div
-              className="bg-secondary p-8 rounded-2xl border border-secondary/30 shadow-xl"
+              className="bg-secondary p-6 rounded-2xl border border-secondary/30 shadow-xl"
               data-aos="zoom-in"
               data-aos-delay="200"
             >
@@ -133,7 +133,7 @@ export default function CaseStudiesSection() {
               </div>
             </div>
             <div
-              className="bg-secondary p-8 rounded-2xl border border-secondary/30 shadow-xl"
+              className="bg-secondary p-6 rounded-2xl border border-secondary/30 shadow-xl"
               data-aos="zoom-in"
               data-aos-delay="300"
             >
@@ -143,7 +143,7 @@ export default function CaseStudiesSection() {
               </div>
             </div>
             <div
-              className="bg-gradient-to-br from-primary to-primary-dark p-8 rounded-2xl text-white shadow-xl"
+              className="bg-gradient-to-br from-primary to-primary-dark p-6 rounded-2xl text-white shadow-xl"
               data-aos="zoom-in"
               data-aos-delay="400"
             >

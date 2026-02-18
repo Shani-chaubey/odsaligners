@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="py-20 bg-gradient-to-r from-primary via-primary-dark to-primary relative overflow-hidden">
+    <section className="py-16 bg-gradient-to-r from-primary via-primary-dark to-primary relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-white opacity-5 rounded-full blur-3xl"></div>
@@ -17,14 +17,14 @@ export default function CTASection() {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white leading-tight">
             Ready to Partner with{" "}
             <span className="bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
               ODS Aligners?
             </span>
           </h2>
 
-          <p className="text-lg mb-10 text-white opacity-95 leading-relaxed">
+          <p className="text-base md:text-lg mb-8 text-white opacity-95 leading-relaxed">
             Join hundreds of clinics and partners worldwide delivering
             exceptional orthodontic outcomes
           </p>

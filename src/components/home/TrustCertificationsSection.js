@@ -141,21 +141,21 @@ function TestimonialCard({ name, role, quote, rating }) {
 
 export default function TrustCertificationsSection() {
   return (
-    <section className="py-20 bg-white relative overflow-hidden">
+    <section className="py-16 bg-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary opacity-2 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
       <div className="xl:container xl:mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-12" data-aos="fade-up">
+        <div className="text-center mb-10" data-aos="fade-up">
           <div className="inline-block px-4 py-2 bg-secondary rounded-full mb-6">
             <span className="text-sm font-semibold text-primary">
               Trust & Quality
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-text">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-text">
             Trust & <span className="gradient-text">Certifications</span>
           </h2>
-          <p className="text-lg max-w-2xl mx-auto text-text opacity-75 leading-relaxed">
+          <p className="text-base md:text-lg max-w-2xl mx-auto text-text opacity-75 leading-relaxed">
             Internationally recognized quality standards and proven clinical
             outcomes
           </p>

@@ -85,7 +85,7 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="py-20 bg-section relative overflow-hidden">
+    <section className="py-16 bg-section relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-0 w-64 h-64 bg-primary opacity-3 rounded-full blur-3xl"></div>
@@ -94,23 +94,23 @@ export default function BenefitsSection() {
 
       <div className="xl:container xl:mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center mb-12" data-aos="fade-up">
+        <div className="text-center mb-10" data-aos="fade-up">
           <div className="inline-block px-4 py-2 bg-secondary rounded-full mb-6">
             <span className="text-sm font-semibold text-primary">
               B2B Advantages
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-text leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-text leading-tight">
             Why Choose <span className="gradient-text">ODS Aligners?</span>
           </h2>
-          <p className="text-lg text-text opacity-75 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-text opacity-75 max-w-2xl mx-auto leading-relaxed">
             Experience the advantages of partnering with a leading aligner
             manufacturer focused on B2B success.
           </p>
         </div>
 
         {/* Content Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
           {/* Left - Benefits Cards */}
           <div className="space-y-5 flex flex-col" data-aos="fade-right">
             {benefits.map((benefit, index) => (

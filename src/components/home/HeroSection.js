@@ -3,7 +3,7 @@ import Aligner3D from "@/components/Aligner3D";
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-32 pb-20 overflow-hidden bg-hero">
+    <section className="relative pt-24 pb-16 overflow-hidden bg-hero">
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary opacity-5 rounded-full blur-3xl"></div>
@@ -11,10 +11,10 @@ export default function HeroSection() {
       </div>
 
       <div className="xl:container xl:mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8" data-aos="fade-right">
-            <div className="space-y-8">
+          <div className="space-y-6" data-aos="fade-right">
+            <div className="space-y-6">
               <div
                 className="inline-block px-4 py-2 bg-secondary rounded-full mb-4"
                 data-aos="fade-up"
@@ -26,7 +26,7 @@ export default function HeroSection() {
               </div>
 
               <h1
-                className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-text"
+                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-text"
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -37,7 +37,7 @@ export default function HeroSection() {
               </h1>
 
               <p
-                className="text-lg md:text-xl leading-relaxed text-text opacity-80 max-w-2xl"
+                className="text-base md:text-lg leading-relaxed text-text opacity-80 max-w-2xl"
                 data-aos="fade-up"
                 data-aos-delay="300"
               >

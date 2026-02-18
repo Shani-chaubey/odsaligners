@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-footer">
+    <footer className="bg-section border-t border-secondary/40">
       <div className="xl:container xl:mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -12,14 +12,14 @@ export default function Footer() {
             <h3 className="text-2xl font-bold mb-4 text-primary">
               ODS Aligners
             </h3>
-            <p className="text-sm mb-4">
+            <p className="text-sm mb-4 text-text opacity-80">
               Precision clear aligners for clinics and partners worldwide.
               Clinically-engineered, quality-controlled solutions.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="transition-colors opacity-70 hover:opacity-100 hover:text-primary text-white"
+                className="transition-colors opacity-70 hover:opacity-100 hover:text-primary text-text"
               >
                 <span className="sr-only">LinkedIn</span>
                 <svg
@@ -32,7 +32,7 @@ export default function Footer() {
               </a>
               <a
                 href="#"
-                className="transition-colors opacity-70 hover:opacity-100 hover:text-primary text-white"
+                className="transition-colors opacity-70 hover:opacity-100 hover:text-primary text-text"
               >
                 <span className="sr-only">Twitter</span>
                 <svg
@@ -48,12 +48,12 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Solutions</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="text-text font-semibold mb-4">Solutions</h4>
+            <ul className="space-y-2 text-sm text-text opacity-80">
               <li>
                 <Link
                   href="/clinic-partnership"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   Clinic Partnership
                 </Link>
@@ -61,7 +61,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/oem-private-label"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   OEM / Private Label
                 </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/dealer-distributor"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   Dealer / Distributor
                 </Link>
@@ -79,12 +79,12 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="text-text font-semibold mb-4">Resources</h4>
+            <ul className="space-y-2 text-sm text-text opacity-80">
               <li>
                 <Link
                   href="/case-studies"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   Case Studies
                 </Link>
@@ -92,7 +92,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/certifications"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   Certifications & Quality
                 </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/resources"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   Training & Support
                 </Link>
@@ -110,12 +110,12 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="text-text font-semibold mb-4">Company</h4>
+            <ul className="space-y-2 text-sm text-text opacity-80">
               <li>
                 <Link
                   href="/about"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   About Us
                 </Link>
@@ -123,7 +123,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/contact"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   Contact
                 </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/terms"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   Terms & Conditions
                 </Link>
@@ -139,7 +139,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   Privacy Policy
                 </Link>
@@ -147,7 +147,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/disclaimer"
-                  className="transition-colors opacity-80 hover:opacity-100 hover:text-primary text-white"
+                  className="transition-colors hover:opacity-100 hover:text-primary"
                 >
                   Clinical Use Disclaimer
                 </Link>
@@ -156,11 +156,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div
-          className="mt-8 pt-8 text-center text-sm"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
-        >
-          <p>
+        <div className="mt-8 pt-8 text-center text-sm border-t border-secondary/40 text-text opacity-80">
+          <p className="opacity-90">
             &copy; {new Date().getFullYear()} ODS Aligners. All rights reserved.
           </p>
           <p className="mt-2 text-xs opacity-70">

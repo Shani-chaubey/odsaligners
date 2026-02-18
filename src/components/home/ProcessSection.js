@@ -89,12 +89,12 @@ export default function ProcessSection() {
   ];
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-20 bg-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-secondary/20"></div>
 
       <div className="xl:container xl:mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Content */}
           <div data-aos="fade-right">
             <div className="inline-block px-4 py-2 bg-secondary rounded-full mb-6">
@@ -102,10 +102,10 @@ export default function ProcessSection() {
                 Partnership Journey
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-text leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-5 text-text leading-tight">
               Simple <span className="gradient-text">Partnership Process</span>
             </h2>
-            <p className="text-xl text-text opacity-80 mb-8 leading-relaxed">
+            <p className="text-lg text-text opacity-80 mb-6 leading-relaxed">
               From initial contact to treating your first patient, we make the
               partnership journey seamless and efficient.
             </p>
@@ -202,7 +202,7 @@ export default function ProcessSection() {
         </div>
 
         {/* Process Steps */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
           {steps.map((step, index) => (
             <div key={index} className="relative group">
               {/* Connector Line */}

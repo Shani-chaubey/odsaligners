@@ -60,22 +60,40 @@ export default function Header() {
             </Link>
             <Link
               href="/certifications"
-              className="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200 text-base font-medium lg:hidden xl:block"
+              className="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200 text-base font-medium hidden xl:block"
             >
               Certifications
             </Link>
             <Link
               href="/resources"
-              className="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200 text-base font-medium lg:hidden xl:block"
+              className="px-4 py-2 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200 text-base font-medium hidden 2xl:block"
             >
               Resources
             </Link>
             <Link
-              href="/contact"
-              className="ml-2 bg-white text-primary px-5 py-2 rounded-lg hover:bg-white/90 transition-all duration-200 text-sm font-semibold shadow-sm"
+              href="https://alignerplatform.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 inline-flex items-center gap-0.5 bg-white text-primary px-5 py-2 rounded-lg hover:bg-white/90 transition-all duration-200 text-sm font-semibold shadow-sm"
             >
-              Contact
+              <span>Register your case</span>
+              <svg
+                className="h-3.5 w-3.5 text-primary"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M6 14L14 6M9 6H14V11"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </Link>
+
           </div>
 
           {/* Mobile Menu Button */}
@@ -169,6 +187,14 @@ export default function Header() {
               >
                 About Us
               </Link>
+              <a
+                href="https://alignerplatform.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 mx-4 bg-white text-primary px-5 py-3 rounded-lg hover:bg-white/90 transition-all duration-200 text-sm font-semibold text-center shadow-sm"
+              >
+                Register your case
+              </a>
               <Link
                 href="/contact"
                 className="mt-2 mx-4 bg-white text-primary px-5 py-3 rounded-lg hover:bg-white/90 transition-all duration-200 text-sm font-semibold text-center shadow-sm"

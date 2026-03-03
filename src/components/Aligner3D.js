@@ -1,24 +1,22 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, useTexture } from "@react-three/drei";
 import * as THREE from "three";
 
-function AlignerImage({ rotationSpeed = 1 }) {
+function AlignerImage({ rotationSpeed = 1, paused = false }) {
   const meshRef = useRef();
-  const texture = useTexture("/images/aligners.png");
-
-  // Configure texture
-  texture.wrapS = THREE.ClampToEdgeWrapping;
-  texture.wrapT = THREE.ClampToEdgeWrapping;
-  texture.flipY = true;
+  const texture = useTexture("/images/aligners.png", (tex) => {
+    tex.wrapS = THREE.ClampToEdgeWrapping;
+    tex.wrapT = THREE.ClampToEdgeWrapping;
+    tex.flipY = true;
+  });
 
   useFrame((state, delta) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.y += delta * rotationSpeed;
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.1;
-    }
+    if (!meshRef.current || paused) return;
+    meshRef.current.rotation.y += delta * rotationSpeed;
+    meshRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.1;
   });
 
   return (
@@ -36,7 +34,7 @@ function AlignerImage({ rotationSpeed = 1 }) {
   );
 }
 
-function Scene() {
+function Scene({ paused }) {
   return (
     <>
       <ambientLight intensity={1.2} />
@@ -46,7 +44,7 @@ function Scene() {
       <pointLight position={[0, -5, 0]} intensity={0.5} color="#e8f4f8" />
 
       {/* Single centered aligner image */}
-      <AlignerImage rotationSpeed={0.4} />
+      <AlignerImage rotationSpeed={0.4} paused={paused} />
 
       <OrbitControls
         enableZoom={false}
@@ -61,15 +59,21 @@ function Scene() {
 }
 
 export default function Aligner3D() {
+  const [paused, setPaused] = useState(false);
+
   return (
-    <div className="w-full h-full relative">
+    <div
+      className="w-full h-full relative"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
       <div className="relative z-10 w-full h-full">
         <Canvas
           camera={{ position: [0, 0, 5], fov: 50 }}
           style={{ width: "100%", height: "100%", background: "transparent" }}
           gl={{ antialias: true, alpha: true, preserveDrawingBuffer: true }}
         >
-          <Scene />
+          <Scene paused={paused} />
         </Canvas>
       </div>
     </div>

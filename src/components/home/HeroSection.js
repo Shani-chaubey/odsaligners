@@ -1,129 +1,104 @@
 import Link from "next/link";
+import HeroCanvas from "@/components/HeroCanvas";
+import RevealWrapper from "@/components/RevealWrapper";
 import Aligner3D from "@/components/Aligner3D";
 
 export default function HeroSection() {
   return (
-    <section className="relative pt-24 pb-16 overflow-hidden bg-hero">
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary opacity-5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl"></div>
-      </div>
+    <section className="relative pt-32 pb-20 overflow-hidden bg-hero text-slate-900">
+      <HeroCanvas />
 
-      <div className="xl:container xl:mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-6" data-aos="fade-right">
-            <div className="space-y-6">
-              <div
-                className="inline-block px-4 py-2 bg-secondary rounded-full mb-4"
-                data-aos="fade-up"
-                data-aos-delay="100"
-              >
-                <span className="text-sm font-semibold text-primary">
-                  B2B Partnership Solutions
-                </span>
+      <div className="relative z-10 xl:container xl:mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="grid lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] gap-12 lg:gap-16 items-center">
+          <div className="space-y-8">
+            <RevealWrapper delay={0.02} className="inline-flex">
+              <div className="inline-flex items-center gap-2 rounded-full border border-cyan-400/40 bg-white/70 px-4 py-1.5 backdrop-blur-xl shadow-sm">
+                <span className="inline-flex h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.9)]" />
+                <p className="text-xs font-medium tracking-[0.18em] uppercase text-slate-600">
+                  B2B orthodontic innovation
+                </p>
               </div>
+            </RevealWrapper>
 
-              <h1
-                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-text"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                Precision Clear Aligners for{" "}
-                <span className="gradient-text block mt-2">
-                  Clinics and Partners
+            <RevealWrapper delay={0.06}>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.05] text-slate-900">
+                Aligners for the{" "}
+                <span className="relative inline-block">
+                  <span className="bg-gradient-to-r from-cyan-500 via-cyan-400 to-sky-500 bg-clip-text text-transparent">
+                    Connected Practice
+                  </span>
+                  <span className="pointer-events-none absolute -inset-x-3 -bottom-2 h-px bg-gradient-to-r from-transparent via-cyan-400/70 to-transparent opacity-70" />
                 </span>
               </h1>
+            </RevealWrapper>
 
-              <p
-                className="text-base md:text-lg leading-relaxed text-text opacity-80 max-w-2xl"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                Clinically-engineered, quality-controlled aligners trusted by
-                orthodontists and private-label partners worldwide.
+            <RevealWrapper delay={0.1}>
+              <p className="max-w-2xl text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed">
+                ODS Aligners combines clinically-engineered protocols, digital workflows,
+                and ISO 13485 manufacturing to power private-label programs, group
+                practices, and clinic networks worldwide.
               </p>
-            </div>
+            </RevealWrapper>
 
-            <div
-              className="flex flex-col sm:flex-row gap-4 pt-4"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <Link
-                href="/clinic-partnership"
-                className="btn-primary text-center px-8 py-4"
-              >
-                Partner with ODS Aligners
-              </Link>
-              <Link
-                href="/oem-private-label"
-                className="btn-outline text-center px-8 py-4"
-              >
-                OEM / Private Label Solutions
-              </Link>
-            </div>
+            <RevealWrapper delay={0.14}>
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
+                <Link
+                  href="/clinic-partnership"
+                  className="relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 px-7 py-3.5 text-sm font-semibold tracking-wide text-slate-950 transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-100"
+                >
+                  <span className="absolute inset-0 opacity-0 transition-opacity duration-200 hover:opacity-20 bg-[radial-gradient(circle_at_10%_0%,white,transparent_45%),radial-gradient(circle_at_90%_100%,white,transparent_55%)]" />
+                  <span className="relative text-white">Partner with ODS Aligners</span>
+                </Link>
+                <Link
+                  href="/oem-private-label"
+                  className="inline-flex items-center justify-center rounded-full border border-slate-300/80 bg-white/80 px-7 py-3.5 text-sm font-semibold text-slate-800 backdrop-blur-xl shadow-sm transition-colors duration-200 hover:border-cyan-400/70 hover:bg-slate-50"
+                >
+                  OEM / Private Label Solutions
+                </Link>
+              </div>
+            </RevealWrapper>
 
-            {/* Trust badges */}
-            <div
-              className="flex items-center gap-6 pt-4"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                    />
-                  </svg>
+            <RevealWrapper delay={0.18}>
+              <div className="flex flex-wrap items-center gap-6 pt-3 text-xs sm:text-sm text-slate-600">
+                <div className="flex items-center gap-2">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-400/5 ring-1 ring-emerald-400/40">
+                    <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.95)]" />
+                  </div>
+                  <div className="space-y-0.5">
+                    <p className="font-medium">ISO 13485 / CE-marked</p>
+                    <p className="text-[11px] text-slate-400">
+                      Medical-grade, audited production environments
+                    </p>
+                  </div>
                 </div>
-                <span className="text-sm font-medium text-text">ISO 13485</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                  <svg
-                    className="w-6 h-6 text-white"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
+                <div className="h-8 w-px bg-gradient-to-b from-transparent via-slate-600/70 to-transparent hidden sm:block" />
+                <div className="flex items-center gap-3">
+                  <div className="flex -space-x-2">
+                    <span className="h-7 w-7 rounded-full border border-slate-200 bg-gradient-to-br from-slate-200 to-slate-400" />
+                    <span className="h-7 w-7 rounded-full border border-slate-200 bg-gradient-to-br from-cyan-400/80 to-sky-500" />
+                    <span className="h-7 w-7 rounded-full border border-slate-200 bg-gradient-to-br from-slate-300 to-slate-500" />
+                  </div>
+                  <div className="space-y-0.5">
+                    <p className="font-medium">Global B2B partner network</p>
+                    <p className="text-[11px] text-slate-400">
+                      Clinics, DSOs, OEMs, and group practices
+                    </p>
+                  </div>
                 </div>
-                <span className="text-sm font-medium text-text">
-                  CE Approved
-                </span>
               </div>
-            </div>
+            </RevealWrapper>
           </div>
 
-          {/* Right - 3D Animation */}
-          <div
-            className="h-[500px] lg:h-[600px] relative"
-            data-aos="fade-left"
-            data-aos-delay="200"
-          >
-            <div className="absolute inset-0 rounded-3xl overflow-hidden">
-              <Aligner3D />
+          <RevealWrapper delay={0.12} className="relative">
+            <div className="relative h-[420px] sm:h-[480px] lg:h-[520px]">
+              <div className="absolute inset-0 rounded-3xl overflow-hidden">
+                <Aligner3D />
+              </div>
             </div>
-          </div>
+          </RevealWrapper>
         </div>
       </div>
     </section>
   );
 }
+
